@@ -14,3 +14,8 @@ Run the command below to initialize. Do not forget to configure your .env file.
 Finally, serve the application.
 
     $ php artisan serve
+
+Credentials login admin:
+
+E-mail: samira@pizzasumma.nl
+Password: password
