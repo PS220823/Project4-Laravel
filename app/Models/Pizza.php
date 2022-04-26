@@ -13,7 +13,7 @@ class Pizza extends Model
 
     public function ingredients()
     {
-        return $this->belongsToMany(Ingredient::class)->withPivot('quantity');;
+        return $this->belongsToMany(Ingredient::class);
     }
 
     public function orderitems()
@@ -26,8 +26,7 @@ class Pizza extends Model
         $price = 0;
         foreach ($this->ingredients as $ingredient)
         {
-            $ingredientprice = $ingredient->price * $ingredient->pivot->quantity;
-            $price +=  $ingredientprice;
+            $price += $ingredient->price;
         }
         return $price;
     }

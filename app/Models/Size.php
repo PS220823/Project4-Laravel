@@ -14,9 +14,4 @@ class Size extends Model
         'name',
         'pricefactor'
     ];
-
-    public function orderitems()
-    {
-        return $this->hasMany(Orderitem::class);
-    }
 }
